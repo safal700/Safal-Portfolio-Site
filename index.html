@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-Site</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,800;0,900;1,400&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins' sans-serif;
+    box-sizing: border-box;
+}
+body{
+    color: #ededed;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 700;
+}
+.logo::before{
+    animation: showRight ease forwards;
+    animation-delay: .4s;
+    
+    content:'';
+    position: absolute;
+   
+    top: 0;
+    right:0 ;
+    width: 100%;
+    height: 100%
+    
+}
+.navbar a{
+    font-size: 18px;
+    color: #ededed;
+    text-decoration:none ;
+    font-weight: 600;
+    margin-left: 35px;
+    transition: .3s;
+}
+.navbar a:hover,
+ .navbar a.active{
+    color: #00abf0;
+}
+.home{
+    background: url('right.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    padding: 0 10%;
+    align-items:center ;
+}
+.home-content{
+    max-width: 600px;
+}
+.home-content h1 {
+   font-size: 56px;
+   font-weight: 700;
+   line-height: 1.2;
+}
+.home-content h3 {
+   font-size: 32px;
+   font-weight: 700;
+   color: #00abf0;
+}
+.home-content p {
+   font-size: 16px;
+   margin: 20px 0 40px;
+}
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+   width: 345px;
+   height: 50px;
+}
+.btn-box a {
+position: relative;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+width: 150px;
+height: 100%;
+background-color:#00abf0 ;
+border: 2px solid #00abf0;
+border-radius: 8px;
+font-size: 19px;
+color: #081b29;
+text-decoration: none;
+font-weight: 600;
+letter-spacing: 1px;
+z-index: 1;
+overflow: hidden;
+}
+.btn-box a:hover{
+    color: #00abf0;
+}
+.btn-box a:nth-child(2){
+background: transparent;
+color: #00abf0;
+}
+.btn-box a:nth-child(2):hover{
+    color: #081b29;
+ }
+.btn-box a:nth-child(2)::before{
+    background: #00abf0;
+}
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100% ;
+    width: 0%;
+    background-color: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+.btn-box a:hover::before{
+    width: 100%;
+}
+.home-sci{
+    width: 170px;
+    bottom: 40px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+.home-sci a{
+    position: relative;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   background-color: transparent;
+   border: 2px solid #00abf0;
+   border-radius: 50%;
+   font-size: 20px;
+   color: #00abf0;
+   text-decoration: none;
+   z-index: 1;
+   overflow: hidden;
+   transition: .5s;
+}
+.home-sci a:hover{
+    color: #081b29;
+}
+.home-sci a::before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+background:#00abf0;
+z-index: -1;
+transition: .5s;
+}
+.home-sci a:hover::before{
+    width: 100%;
+}
+.home-imghover{
+    position:absolute ;
+    width: 758px;
+    height: 100%;
+    background-color: transparent;
+    top: 0;
+    right:1px ;
+    transition: 3s;
+   }
+.home-imghover:hover{
+    background-color: black;
+    opacity: .8;
+}
+@keyframes showRight{
+    100% {
+        width: 0;
+    }
+
+    
+}
+
+.projects a{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    height: 400px;
+}
+.projects a:active{
+    color: #00abf0;
+    text-decoration: underline 1px solid #00abf0;
+    font-size: 17px;
+    background-color: transparent;
+}
+.class1, .class2{
+    color: white;
+    background-color: #05f254;
+    padding: 0 15px;
+    border-radius: 10px;
+   
+}
+
+
+    
+    </style>
+    <header class="header">
+        <a href="#" class="logo">Safal-Portfolio-Site</a>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Sercices</a>
+            <a href="#">Contact</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Skills</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <h1>Hi I am Safal</h1>
+            <h3>Welcome to my Portfolio-Site</h3>
+            <p>This is my first Portfolio website I have ever Upload I am from (JSS)
+                Janata Secondary School.I am just 14 years old and I have a basic knowledge and
+                skills in html css js and others .
+            </p>
+
+            <div class="projects">
+                <h3>Here are some of my project</h3><br>
+                <h4>Click here to see:</h4><br>
+                <a class="class1" href="index2.html">Web-Calculator</a>
+                <a  class="class2" style="margin-left: 140px;" href="index3.html">Google-not-working clone</a>
+            </div><br>
+             <div class="btn-box">
+                <a href="#">Hire me</a>
+                <a href="#">Lets Talk</a>
+             </div>
+        </div>
+        <div class="home-sci">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+        </div>
+        <span class="home-imghover"></span>
+    </section>
+</body>
+
+</html>

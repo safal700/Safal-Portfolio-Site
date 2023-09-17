@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+    <style>
+        *{
+    margin: 0;
+}
+.material-symbols-outlined:hover{
+    cursor: pointer;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    align-items: center;
+}
+.header a{
+    margin-right: 20px;
+    color: rgb(0, 0, 0, 0.87);
+    font-size: 15px;
+    text-decoration: inherit;
+}
+.header a:hover{
+    text-decoration: underline;
+}
+.header_right{
+    display: flex;
+    align-items: center;
+    min-width: 13vw;
+    justify-content: space-between;
+}
+.header_right .header_apps{
+    margin-right: 10px;
+}
+.mainBody{
+    flex: 1;
+    display: flex;
+    margin-top: 12%;
+    flex-direction: column;
+}
+.search_input{
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgray;
+    height: 30px;
+    padding: 10px 20px;
+    border-radius: 999px;
+    width: 75vw;
+    margin: 0 auto;
+    margin-top: 40px;
+    max-width: 560px;
+
+}
+.search_input input{
+    flex: 1;
+    border: none;
+    outline: none;
+}
+.search_input .material-symbols-outlined{
+    color: gray
+}
+.search_buttons{
+    margin-top: 30px;
+    justify-content: center;
+    display: flex;
+}
+.search_buttons button{
+    margin: 5px;
+    padding: 10px 15px;
+    outline: none;
+    background-color:#7898a9 ;
+    cursor: pointer;
+    }
+    </style>
+    <div class="header">
+        <div class="header_left">
+       <a href="#">Home</a>
+       <a href="#">Store</a>
+        </div>
+        <div class="header_right">
+             <a href="#">Gmail</a>
+             <a href="#">Images</a>
+             <span class="material-symbols-outlined header_apps">             apps             </span>
+             <span class="material-symbols-outlined">             account_circle             </span>
+        </div>
+        </div>
+
+        <div class="mainBody">
+            <img style=" object-fit: contain;
+            height: 22vh;"  src="googlelarge.png" alt="">
+
+            <div class="search">
+                <div class="search_input">
+                    <span class="material-symbols-outlined">                      search                      </span>
+                    <input type="text" placeholder="Search here?">
+                    <span class="material-symbols-outlined">                  mic                  </span>
+                </div>
+
+                <div class="search_buttons">
+                    <button>Google search</button>
+                    <button>I am very lucky</button>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
